@@ -1,0 +1,32 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+	int a[2][3];
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			cout << "Input " << i + 1 << " " << j + 1 << " : ";
+			cin >> a[i][j];
+		}
+	}
+	cout << setfill('*') ;
+	cout << setw(20) <<  "Display Array" << setw(20) << "\n";
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+			cout << "\t" << a[i][j] << "  ";
+		cout << endl;
+	}
+	cout << setw(20) << "Display Matrix" << setw(20) << "\n";
+	for (int i = 0; i < 3; i++)
+	{ 
+		for (int j = 0; j < 2; j++)
+			cout << "\t" << a[j][i] << "  ";
+			cout << endl;
+	}
+	system("pause");
+	return 0;
+}
